@@ -7,7 +7,7 @@ export class CourseService {
     constructor(private http: Http) { }
 
     fetchCourses(): Promise<any>{
-        return this.http.get('http://localhost:4200/assets/dummy.json')
+        return this.http.get('http://localhost:8080/courses')
         .toPromise()
         .then(res=>res.json())
     }
